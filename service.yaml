@@ -9,7 +9,7 @@ metadata:
   labels:
     app: poc
 spec:
-  type: CLusterIP
+  type: ClusterIP
   ports:
   - name: poc
     protocol: TCP

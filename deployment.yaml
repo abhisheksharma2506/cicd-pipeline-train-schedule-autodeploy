@@ -1,0 +1,21 @@
+metadata:
+  name: poc
+spec:
+  selector:
+    matchLabels:
+      app: poc
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: poc
+    spec:
+      containers:
+      - name: poc
+        image: docker push abhi09623/php-freelance:6
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 300m
+            memory: 200Mi
